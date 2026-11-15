@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Scans the staged files for secrets before every commit (enabled by `pnpm install`, which sets core.hooksPath).
+# Skips with a warning when trufflehog is not installed; CI runs the same scan on every push.
+set -euo pipefail
+if ! command -v trufflehog >/dev/null; then
+  echo "pre-commit: trufflehog not installed, skipping secret scan (brew install trufflehog)" >&2
+  exit 0
+fi
+cd "$(git rev-parse --show-toplevel)"
+files=$(git diff --cached --name-only --diff-filter=d)
+[ -z "$files" ] && exit 0
+# shellcheck disable=SC2086
+echo "$files" | xargs trufflehog filesystem --no-update --fail --no-verification --config .trufflehog.yaml >/dev/null 2>/tmp/trufflehog-precommit.log || {
+  echo "pre-commit: possible secret in the staged files:" >&2
+  cat /tmp/trufflehog-precommit.log >&2
+  echo "Remove it (keep keys in .env, which is git-ignored) and commit again." >&2
+  exit 1
+}

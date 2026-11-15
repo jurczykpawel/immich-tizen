@@ -1,0 +1,20 @@
+services:
+  pair:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "443:8443"
+    environment:
+      PORT: "8443"
+      STATIC_DIR: /app/phone
+      TLS_KEY: /certs/tvpair.key
+      TLS_CERT: /certs/tvpair.crt
+    volumes:
+      - ./certs:/certs:ro
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 96m
+    pids_limit: 64

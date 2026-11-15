@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="117" height="117" viewBox="0 0 117 117">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#232a3d"/><stop offset="1" stop-color="#0b0d12"/></linearGradient>
+    <path id="petal" d="M58.5 46 C46 38 45 20 58.5 8 C72 20 71 38 58.5 46 Z"/>
+  </defs>
+  <rect width="117" height="117" rx="26" fill="url(#bg)"/>
+  <use href="#petal" fill="#f2c94c"/>
+  <use href="#petal" fill="#eb5757" transform="rotate(90 58.5 58.5)"/>
+  <use href="#petal" fill="#6fcf97" transform="rotate(180 58.5 58.5)"/>
+  <use href="#petal" fill="#56ccf2" transform="rotate(270 58.5 58.5)"/>
+</svg>

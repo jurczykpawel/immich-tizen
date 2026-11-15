@@ -1,0 +1,57 @@
+{
+  "name": "immich-tizen",
+  "version": "0.1.0",
+  "description": "Immich client for Samsung Tizen TVs: browse albums and years, run photo and video slideshows with the remote, set up with a phone via QR code.",
+  "license": "MIT",
+  "author": "Paweł Jurczyk",
+  "homepage": "https://github.com/jurczykpawel/immich-tizen#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurczykpawel/immich-tizen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jurczykpawel/immich-tizen/issues"
+  },
+  "keywords": [
+    "immich",
+    "tizen",
+    "samsung",
+    "smart-tv",
+    "slideshow",
+    "photos",
+    "preact"
+  ],
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.18.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:phone": "vite build --config vite.phone.config.ts",
+    "test:tv": "vitest run --config vitest.tv.config.ts",
+    "deploy:tv": "tools/deploy.sh",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
+    "scan:secrets": "trufflehog git file://. --no-update --fail --config .trufflehog.yaml --results=verified,unverified"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "preact": "^11.2.0",
+    "qrcode-generator": "^2.0.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@testing-library/preact": "^3.2.6",
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "doiuse": "^6.0.6",
+    "jsdom": "^31.0.1",
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "postcss": "^8.5.33",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

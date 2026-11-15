@@ -1,0 +1,10 @@
+# TruffleHog configuration (used by CI and by the pre-commit hook).
+# Built-in detectors cover cloud and service keys. Immich API keys have no built-in detector, so one is defined here.
+detectors:
+  - name: ImmichApiKey
+    keywords:
+      - VITE_IMMICH_KEY
+      - x-api-key
+      - apiKey
+    regex:
+      key: '(?i)(?:VITE_IMMICH_KEY|x-api-key|api[_-]?key)["'']?\s*[:=]\s*["'']?([A-Za-z0-9_-]{40,46})\b'

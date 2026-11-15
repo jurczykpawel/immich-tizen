@@ -1,0 +1,50 @@
+[
+  {
+    "albumName": "Album 0",
+    "description": "",
+    "albumThumbnailAssetId": "4c447a8a-a39d-5a16-8505-9ad31f86d2ff",
+    "createdAt": "2026-11-11T13:46:22.054Z",
+    "updatedAt": "2026-11-15T09:19:43.110Z",
+    "id": "518a3a72-7d69-5cf8-a31d-94518b42ef88",
+    "albumUsers": [],
+    "shared": false,
+    "hasSharedLink": false,
+    "startDate": "2017-10-12T00:00:00.000Z",
+    "endDate": "2026-11-14T00:00:00.000Z",
+    "assetCount": 13066,
+    "isActivityEnabled": true,
+    "order": "desc",
+    "lastModifiedAssetTimestamp": "2026-11-14T21:29:09.524Z"
+  },
+  {
+    "albumName": "Album 2",
+    "description": "",
+    "albumThumbnailAssetId": "8c71105c-c31a-5fab-8897-b6ab5913eb00",
+    "createdAt": "2026-11-10T12:01:39.737Z",
+    "updatedAt": "2026-11-10T12:01:42.779Z",
+    "id": "017ae1e8-d4a6-58f3-b802-e537c613638c",
+    "albumUsers": [],
+    "shared": true,
+    "hasSharedLink": false,
+    "startDate": "2026-10-22T00:00:00.000Z",
+    "endDate": "2026-11-10T00:00:00.000Z",
+    "assetCount": 12,
+    "isActivityEnabled": true,
+    "order": "desc",
+    "lastModifiedAssetTimestamp": "2026-11-10T12:01:43.142Z"
+  },
+  {
+    "albumName": "Album 4",
+    "description": "",
+    "albumThumbnailAssetId": null,
+    "createdAt": "2026-11-11T13:46:22.658Z",
+    "updatedAt": "2026-11-11T13:46:22.658Z",
+    "id": "007ba361-ef9b-5c27-a73c-3d5eba94cdb0",
+    "albumUsers": [],
+    "shared": false,
+    "hasSharedLink": false,
+    "assetCount": 0,
+    "isActivityEnabled": true,
+    "order": "desc"
+  }
+]
